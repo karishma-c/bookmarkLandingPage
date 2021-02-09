@@ -9,7 +9,7 @@ listOne.addEventListener("click", (e) => {
     listOne.classList.add("show-feature1");
     listTwo.classList.remove("show-feature2");
     listThree.classList.remove("show-feature3");
-    featureOne.style.display = "block";
+    featureOne.style.display = "flex";
     featureTwo.style.display = "none";
     featureThree.style.display = "none";
 });
@@ -19,7 +19,7 @@ listTwo.addEventListener("click", (e) => {
     listTwo.classList.add("show-feature2");
     listThree.classList.remove("show-feature3");
     featureOne.style.display = "none";
-    featureTwo.style.display = "block";
+    featureTwo.style.display = "flex";
     featureThree.style.display = "none";
 });
 
@@ -29,7 +29,7 @@ listThree.addEventListener("click", (e) => {
     listThree.classList.add("show-feature3");
     featureOne.style.display = "none";
     featureTwo.style.display = "none";
-    featureThree.style.display = "block";
+    featureThree.style.display = "flex";
 });
 
 const questionAns = document.querySelectorAll(".QA");
@@ -56,26 +56,21 @@ closeBtn.addEventListener("click", () => {
     hamMenu.style.display = "block";
 });
  
+const formElement = document.getElementById("contact");
 const inputName = document.getElementById("name");
-const conBtn = document.getElementById("contactbtn");
+const conBtn = document.getElementById("contactBtn");
 conBtn.addEventListener("click", (e) => {
-    var inputValue = inputName.value;
-    validateMail(inputValue);
-})
+    e.preventDefault();
+    var imageElement = document.createElement('img');
+    imageElement.src = "./asset/images/icon-error.svg";
+    inputName.appendChild(imageElement);
+    inputName.style.border = "3px solid #fa5757"; 
+    var errorMsg = document.createElement('h4');
+    errorMsg.classList.add("error-msg");
+    errorMsg.innerHTML = "Please enter a valid email";
+    formElement.appendChild(errorMsg);
+    setTimeout(function () {
+        errorMsg.style.display='none';
+    }, 3000);
+});
 
-function validateMail(inputValue)
-{
-var mailformat = /^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/;
-if(inputValue.value.match(mailformat))
-{
-alert("You have entered a valid email address!");    //The pop up alert for a valid email address
-document.form1.text1.focus();
-return true;
-}
-else
-{
-alert("You have entered an invalid email address!");    //The pop up alert for an invalid email address
-document.form1.text1.focus();
-return false;
-}
-}
