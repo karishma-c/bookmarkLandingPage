@@ -7,7 +7,7 @@
     --fs-4: 1rem;
     --fs-5: .9rem;
     --fs-6: .75rem;
-    --fs-7: 2rem;
+    --fs-7: 1.8rem;
     --fs-8: .85rem;
     --fs-9: 1.3rem;
     --fw: 400;
@@ -217,12 +217,11 @@ body {
     margin: 30px 10px 10px 10px;
     width: 100%;
 }
-
 .feature2, .feature3 {
     display: none;
 }
 .featuresImage {
-    margin: 10px 10px 30px 10px;
+    margin: 10px 10px 30px 90px;
     width: 40%;
 }
 .featuresImage img {
@@ -238,13 +237,13 @@ body {
     flex-flow: column nowrap;
     align-items: flex-start;
     justify-content: flex-start;
-    margin: 0 0 0 50px;
-    width: 50%;
+    width: 40%;
+    margin: 10px 30px 30px 50px;
 }
 .desc .featuresHeading {
     font-weight: var(--fw-1);
     text-align: left;
-    margin: 30px 30px 30px 0;
+    margin: 30px 30px 0 0;
 }
 .desc .description {
     text-align: left;
@@ -344,9 +343,6 @@ body {
 .arrowImage {
     margin-left: auto;
 }
-.arrow-element path {
-    fill: red;
-}
 .answer {
     color: var(--color-2);
     font-size: var(--fs-5);
@@ -398,7 +394,7 @@ body {
     flex-flow: row nowrap;
     align-items: center;
     justify-content: center;
-    margin: 10px auto 60px;
+    margin: 10px auto 80px;
     width: 80%;
 }
 #name {
@@ -428,11 +424,11 @@ body {
 .error-msg {
     background-color: var(--color-1);
     color: var(--color-neutral);
-    font-size: var(--fs-4);
+    font-size: var(--fs-5);
     font-weight: var(--fw-2);
-    height: 25px;
-    width: 25%;
-    margin: -58px 50px 50px -95px;
+    height: 15px;
+    width: 16%;
+    margin: -75px 50px 10px -95px;
     padding: 15px;
     border-radius: var(--br);
 }
@@ -529,6 +525,10 @@ footer {
         height: 100%;
         object-fit: contain;
     }
+    .featuresImage {
+        margin: 10px 10px 30px 90px;
+        width: 45%;
+    }
     .features .description {
         width: 42%;
     }
@@ -598,6 +598,45 @@ footer {
     .introImage {
         margin: 10px auto;
         width: 80%;
+    }
+    .feature1, .feature2, .feature3 {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        margin: 30px auto;
+    }
+    .feature2, .feature3 {
+        display: none;
+    }
+    .featuresImage {
+        margin: 20px auto;
+        width: 60%;
+    }
+    .desc {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        margin: 20px auto;
+    }
+    .desc .featuresHeading {
+        font-weight: var(--fw-1);
+        margin: 10px auto;
+    }
+    .desc .description {
+        width: 70%;
+        text-align: center;
+        margin: 20px auto 30px;
+    }
+    .desc .btn {
+        text-decoration: none;
+        background-color: var(--color);
+        color: var(--color-neutral);
+        padding: 10px 15px;
+        border-radius: var(--br);
+        margin: 0 auto;
     }
     .features .description {
         width: 55%;
@@ -743,8 +782,15 @@ footer {
         text-align: center;
         margin: 10px auto;
     }
+    .featuresHeading, .downloadsHeading, .questionsHeading {
+        font-size: var(--fs-9);
+        font-weight: var(--fw-2);
+        text-align: center;
+        margin: 0 auto 10px;
+    }
     .introduction .description, .downloadsIntro .description, .frequentQuestions .description {
-        width: 70%;
+        font-size: var(--fs-5);
+        width: 80%;
         padding: 5px 15px;
     }
     .chromeBtn, .firefoxBtn {
@@ -771,7 +817,8 @@ footer {
         margin: 10px auto;
     }
     .features .description {
-        width: 82%;
+        font-size: var(--fs-5);
+        width: 92%;
     }
     .benefits {
         display: flex;
@@ -795,6 +842,16 @@ footer {
         margin: 10px 50px 0;
         border-bottom: 1.5px solid var(--color-4);
         text-align: center;
+    }
+    .featuresImage {
+        width: 85%;
+    }
+    .desc .featuresHeading {
+        font-size: var(--fs-9);
+    }
+    .desc .description {
+        font-size: var(--fs-5);
+        width: 90%;
     }
     .bookmarkQues {
         display: flex;
@@ -850,6 +907,9 @@ footer {
         margin: 10px auto;
         padding: 10px 40px;
     }
+    .desc .description {
+        padding: 10px;
+    }
     .buttons {
         display: flex;
         flex-flow: row nowrap;
@@ -868,16 +928,18 @@ footer {
         border: 2px solid var(--color);
         border-radius: var(--br);
     }
+    .firefoxBtn {
+        background-color: var(--color-neutral);
+        border: 2px solid var(--color-neutral);
+        color: var(--color-3);
+        box-shadow: 1px 3px 6px rgba(0,0,0,.2);
+        margin: 0;
+    }
     .chromeBtn {
         margin: 0 20px 0 0;
     }
-    .firefoxBtn {
-        margin: 0;
-    }
-    .featuresHeading, .downloadsHeading, .questionsHeading {
-        font-size: var(--fs-9);
-        font-weight: var(--fw-2);
-        text-align: center;
-        margin: 0 auto 10px;
+    .firefoxBtn:hover {
+        border: 2px solid var(--color-3);
+        border-radius: var(--br);
     }
 }
