@@ -905,9 +905,10 @@ footer {
         color: var(--color-2);
         line-height: 1.7;
         margin: 10px auto;
-        padding: 10px 40px;
+        padding: 10px auto 30px;
     }
-    .desc .description {
+    .features .description {
+        width: 92%;
         padding: 10px;
     }
     .buttons {
