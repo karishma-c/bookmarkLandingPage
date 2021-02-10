@@ -890,7 +890,7 @@ footer {
     }
 }
 
-@media(max-width:320px) {
+@media(max-width:370px) {
 
     .introHeading {
         font-size: var(--fs-2);
