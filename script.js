@@ -5,28 +5,39 @@ const listThree = document.getElementsByClassName("list3")[0];
 const featureOne = document.getElementsByClassName("feature1")[0];
 const featureTwo = document.getElementsByClassName("feature2")[0];
 const featureThree = document.getElementsByClassName("feature3")[0];
+
+
 listOne.addEventListener("click", (e) => {
-    listOne.classList.add("show-feature1");
-    listTwo.classList.remove("show-feature2");
-    listThree.classList.remove("show-feature3");
+    // listOne.classList.add("show-feature1");
+    listOne.style.borderBottom = "2px solid hsl(0, 94%, 66%)";
+    listTwo.style.borderBottom = "1.5px solid hsl(210, 10%, 92%)";
+    listThree.style.borderBottom = "1.5px solid hsl(210, 10%, 92%)";
+    // listTwo.classList.remove("show-feature2");
+    // listThree.classList.remove("show-feature3");
     featureOne.style.display = "flex";
     featureTwo.style.display = "none";
     featureThree.style.display = "none";
 });
 
 listTwo.addEventListener("click", (e) => {
-    listOne.classList.remove("show-feature1");
-    listTwo.classList.add("show-feature2");
-    listThree.classList.remove("show-feature3");
+    // listOne.classList.remove("show-feature1");
+    listOne.style.borderBottom = "1.5px solid hsl(210, 10%, 92%)";
+    listTwo.style.borderBottom = "2px solid hsl(0, 94%, 66%)";
+    listThree.style.borderBottom = "1.5px solid hsl(210, 10%, 92%)";
+    // listTwo.classList.add("show-feature2");
+    // listThree.classList.remove("show-feature3");
     featureOne.style.display = "none";
     featureTwo.style.display = "flex";
     featureThree.style.display = "none";
 });
 
 listThree.addEventListener("click", (e) => {
-    listOne.classList.remove("show-feature1");
-    listTwo.classList.remove("show-feature2");
-    listThree.classList.add("show-feature3");
+    // listOne.classList.remove("show-feature1");
+    // listTwo.classList.remove("show-feature2");
+    listOne.style.borderBottom = "1.5px solid hsl(210, 10%, 92%)";
+    listTwo.style.borderBottom = "1.5px solid hsl(210, 10%, 92%)";
+    listThree.style.borderBottom = "2px solid hsl(0, 94%, 66%)";
+    // listThree.classList.add("show-feature3");
     featureOne.style.display = "none";
     featureTwo.style.display = "none";
     featureThree.style.display = "flex";
@@ -36,9 +47,12 @@ const questionAns = document.querySelectorAll(".QA");
 for(let i = 0; i < questionAns.length; i++) {
     questionAns[i].addEventListener("click", (e) => {
         const arrow = document.querySelectorAll(".arrow-element");
+        const downarrow = arrow[i].childNodes[1];
+        downarrow.classList.toggle("togglestroke");
         const ans = document.querySelectorAll(".answer");
         ans[i].classList.toggle("show-answer");
         arrow[i].classList.toggle("change-arrow");
+
     });
 }
 
